@@ -30,7 +30,6 @@
                         $('#navbar').css('padding-bottom', '15px');
                     }
                 });
-
                 // for mobile devices
                 var width = $(document).width();
                 if(width < 500){
@@ -41,6 +40,10 @@
                         +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
                     $('#contact').css('height', 'auto');
                     $('#greenBox').css('padding', '10px');
+                }
+                var height = $(document).height();
+                if(height < 400){
+                    $('#home').css('height', 'auto');
                 }
                 
                 // on resizing the window
@@ -70,26 +73,21 @@
                 });
                 
                 
-
                 // adds smooth scroll functionality
                 $('.nav-link, .decorative-about-button').on('click', function(event) {
                     $('html, body').animate({scrollTop: $(this.hash).offset().top}, 600/*scroll time in ms*/);
                 });
-
                 $('.nav-link').on('click', function(){
                     $('#collapsibleNavbar').collapse('hide');
                 });
-
                 var ab1 = false;
                 var ab2 = false
                 var text1 = "";
                 var text2 = "";
-
                 var des1 = "<p style='color: white; font-family:Veranda; font-style:oblique; color:rgb(110,50,1); "
                     + "margin-top: 80px;'>It was a national level interschool  competitive programming competition organised "
                     + "by Jayshree Periwal International School, sponsored by Apple Inc. in which our team secured the first "
                     + "position.</p>";
-
                 $('.achievements-box1').on('click', function(event){
                     if(ab1 == false){
                         text1 = $('.achievements-box1').html();
@@ -99,7 +97,6 @@
                         ab1 = true;
                     }
                 });
-
                 $('.achievements-box1').on('mouseleave', function(event){
                     if(ab1==true){
                         $('.achievements-box1').css('height', '');
@@ -107,13 +104,10 @@
                         ab1 = false;
                     }
                 });
-
                 var des2 = "<p style='color: white; font-family:Veranda; font-style:oblique; color:rgb(110,50,1); "
                     + "margin-top: 80px;'>It was a national level rock band competition organised by Yamaha Music in Gurgaon "
                     + "in which we were the runners up.</p>";
-
                 
-
                 $('.achievements-box2').on('click', function(event){
                     if(ab2 == false){
                         text2 = $('.achievements-box2').html();
@@ -123,7 +117,6 @@
                         ab2 = true;
                     }
                 });
-
                 $('.achievements-box2').on('mouseleave', function(event){
                     if(ab2 == true){
                         $('.achievements-box2').css('height', '');
@@ -134,21 +127,17 @@
             });
         </script>
         <style>
-
             @font-face{
                 font-family: 'Laksaman';
                 src: url('https://shayakbanerjee.000webhostapp.com/Laksaman.ttf')format(ttf);
             }
-
             .cover{
                 background: url('https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532773251129/home/background.jpg');
                 background-size: cover;
             }
-
             .bg-dark-translucent{
                 background-color: rgba(0, 0, 0, 0.4);
             }
-
             .brand-logo{
                 font-family: "Marck Script", sans-serif;
                 font-weight: 900;
@@ -157,18 +146,15 @@
                 margin-left: 10px;
                 
             }
-
             .nav-link{
                 color: white;
                 border-radius: 5px !important; 
                 margin-right: 5px !important;
             }
-
             .nav-link:hover{
                 background-color: rgba(255, 255, 255, 0.9);
                 color:black;
             }
-
             .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
                 color: black;
                 background-color: white;
@@ -184,19 +170,16 @@
                 .name{
                     font-size: 6vw;
                 }
-
                 .android-developer{
                     font-size: 2vw;
                 }
             }
-
             .android-developer{
                 text-align: end; 
                 color: white; 
                 font-family: 'roboto', sans-serif;
                 font-size: 18px;
             }
-
             .about-title{
                 font-family: 'MontSerrat', sans-serif;
                 font-size: 65px;
@@ -204,24 +187,19 @@
                 color: #333333;
                 margin-top: 15px;
             }
-
             .about-headings{
                 color: #333333;
                 font-weight: 300;
-
             }
-
             .about-content{
                 border: 2px solid #333333; 
                 padding: 15px;
                 margin: 15px;
                 border-radius: 3px;
             }
-
             .about-content p{
                 font-family: 'Laksaman', sans-serif;
             }
-
             #navbar{
                 position: fixed; 
                 width: 100%; 
@@ -229,7 +207,6 @@
                 padding-bottom: 15px; 
                 z-index: 2;
             }
-
             .decorative-about-button{
                 font-family: 'MontSerrat', sans-serif;
                 font-weight: 700;
@@ -244,13 +221,11 @@
                 border-radius: 20px;
                 border: 2px solid #ffd735;
             }
-
             .decorative-about-button:hover{
                 background-color: #ffcc00;
                 text-decoration: none;
                 color: #333333;
             }
-
             .decoration-line{
                 width: 90px; 
                 height: 18px; 
@@ -258,7 +233,6 @@
                 margin-top: 14%;
                 display: inline-block;
             }
-
             .bottom-triangle{
                 margin-top: 8px;
                 width: 0;
@@ -274,7 +248,6 @@
                 width: 100%; 
                 height: 250px;
             }
-
             .achievement-title{
                 font-family: 'MontSerrat', 'sans-serif'; 
                 text-transform: uppercase; 
@@ -283,13 +256,11 @@
                 margin-top: 20px; 
                 margin-bottom: 0px;
             }
-
             .achievement-description{
                 font-family: 'Veranda';
                 font-style: oblique; 
                 color: rgb(110, 50, 1);
             }
-
             .achievements-box{
                 border: 2px solid #b16400; 
                 padding-top:15px; 
@@ -298,11 +269,9 @@
                 cursor: pointer;
                 transition: 0.5s;
             }
-
             .achievements-box:hover{
                 background-color: #e9972c;
             }
-
             .submit-button{
                 margin-bottom: 20px; 
                 background-color: #005221; 
@@ -317,7 +286,6 @@
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
-
             .submit-button:hover{
                 background-color: #016429;
                 border-color: #016429;
@@ -325,7 +293,6 @@
                 text-decoration: none;
                 cursor: pointer;
             }
-
             .social-media-handle-button{
                 height: 50px; 
                 width: 50px; 
@@ -334,7 +301,6 @@
                 border-radius: 25px;
                 margin: 10px;
             }
-
             .social-media-handle-button:hover{
                 background-color: #48ff91;
             }
