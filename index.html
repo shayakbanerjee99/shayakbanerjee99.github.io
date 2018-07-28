@@ -32,8 +32,59 @@
 
                 // adds smooth scroll functionality
                 $('.nav-link, .decorative-about-button').on('click', function(event) {
-                        // 600 is the time it takes to smooth scrool
-                        $('html, body').animate({scrollTop: $(this.hash).offset().top}, 600);
+                    $('html, body').animate({scrollTop: $(this.hash).offset().top}, 600/*scroll time in ms*/);
+                });
+
+                var ab1 = false;
+                var ab2 = false
+                var text1 = "";
+                var text2 = "";
+
+                var des1 = "<p style='color: white; font-family:Veranda; font-style:oblique; color:rgb(110,50,1); "
+                    + "margin-top: 80px;'>It was a national level interschool  competitive programming competition organised "
+                    + "by Jayshree Periwal International School, sponsored by Apple Inc. in which our team secured the first "
+                    + "position.</p>";
+
+                $('.achievements-box1').on('click', function(event){
+                    if(ab1 == false){
+                        text1 = $('.achievements-box1').html();
+                        var height = $('.achievements-box1').height();
+                        $('.achievements-box1').html(des1);
+                        $('.achievements-box1').css("height", height+20);
+                        ab1 = true;
+                    }
+                });
+
+                $('.achievements-box1').on('mouseleave', function(event){
+                    if(ab1==true){
+                        $('.achievements-box1').css('height', '');
+                        $('.achievements-box1').html(text1);
+                        ab1 = false;
+                    }
+                });
+
+                var des2 = "<p style='color: white; font-family:Veranda; font-style:oblique; color:rgb(110,50,1); "
+                    + "margin-top: 80px;'>It was a national level rock band competition organised by Yamaha Music in Gurgaon "
+                    + "in which we were the runners up.</p>";
+
+                
+
+                $('.achievements-box2').on('click', function(event){
+                    if(ab2 == false){
+                        text2 = $('.achievements-box2').html();
+                        var height = $('.achievements-box2').height();
+                        $('.achievements-box2').html(des2);
+                        $('.achievements-box2').css("height", height+20);
+                        ab2 = true;
+                    }
+                });
+
+                $('.achievements-box2').on('mouseleave', function(event){
+                    if(ab2 == true){
+                        $('.achievements-box2').css('height', '');
+                        $('.achievements-box2').html(text2);
+                        ab2 = false;
+                    }
                 });
             });
         </script>
@@ -130,7 +181,7 @@
                 color: #ffd735;
                 display: inline-block;
                 margin-top: 100px;
-                margin-bottom: 10px;
+                margin-bottom: 40px;
                 padding: 7px;
                 width: 90px;
                 padding: 5px;
@@ -172,7 +223,7 @@
                 font-family: 'MontSerrat', 'sans-serif'; 
                 text-transform: uppercase; 
                 font-weight: 600;
-                color: #6b3d01; 
+                color: #472901; 
                 margin-top: 20px; 
                 margin-bottom: 0px;
             }
@@ -180,7 +231,20 @@
             .achievement-description{
                 font-family: 'Veranda';
                 font-style: oblique; 
-                color: rgb(151, 68, 0);
+                color: rgb(110, 50, 1);
+            }
+
+            .achievements-box{
+                border: 2px solid #b16400; 
+                padding-top:15px; 
+                border-radius: 3px; 
+                background-color:#b16400;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            .achievements-box:hover{
+                background-color: #e9972c;
             }
 
             .submit-button{
@@ -278,7 +342,7 @@
             </div>
 
             <!-- learner bitplumber creator -->
-            <div class="row justify-content-center" style="margin-top: 30px">
+            <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 30px;">
                 <div class="col-sm-3 about-content">
                     <h3 class="about-headings">Learner</h3>
                     <p>Forever enthusiastic to learn new things and expand my horizons</p>
@@ -309,22 +373,26 @@
                 <div style="width: 426px; height: 7px; background-color: #8d5000;"></div>
             </div>
             <div style="display: relative; margin-left: auto; margin-right: auto; width: 80%;">
-                <div class="row justify-content-center" style="position:relative; margin-top: 50px; text-align: center;">
-
-                    <div class="col-sm-5" style="margin-right: 50px">
+                <div class="row justify-content-center" style="position:relative; margin-top: 50px; text-align: center;
+                    padding-bottom: 40px;">
+                    
+                    <div class="col-sm-5 achievements-box achievements-box1" style="margin-right: 50px;">
                         <img class="achievements-image" src="https://image.ibb.co/nrQEB8/game_of_codes.jpg">
                         <p class="achievement-title">Game Of Codes</p>
                         <p class="achievement-description">Interschool competitive programming competition</p>
                     </div>
 
-                    <div class="col-sm-5">
+                    <div class="col-sm-5 achievements-box achievements-box2">
                         <img class="achievements-image" src="https://image.ibb.co/jS8qjT/teens_rock.jpg">
                         <p class="achievement-title">yamaha teen's rock</p>
                         <p class="achievement-description">National level rock band competition</p>
                     </div>
                 </div>
             </div>
+
+            
         </div>
+        
         <div id="contact" style="width: 100%; height: 100%; background-color: #d5ffe6; text-align: center;">
 
             <h1 style="color: #008033; font-family: 'MontSerrat', 'sans-serif'; position: relative;
