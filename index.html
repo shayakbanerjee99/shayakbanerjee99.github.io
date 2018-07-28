@@ -64,6 +64,10 @@
                     $('html, body').animate({scrollTop: $(this.hash).offset().top}, 600/*scroll time in ms*/);
                 });
 
+                $('.nav-link').on('click', function(){
+                    $('#collapsibleNavbar').collapse('hide');
+                });
+
                 var ab1 = false;
                 var ab2 = false
                 var text1 = "";
