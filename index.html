@@ -16,7 +16,7 @@
         <script>
             $(document).ready(function(){
                 // go to top of the page on startup/refresh
-                // window.scrollTo(0, 0);
+                window.scrollTo(0, 0);
                 // Changes the color of the navigation bar on scroll
                 $(window).scroll(function(){
                     var scroll = $(window).scrollTop();
@@ -30,18 +30,22 @@
                         $('#navbar').css('padding-bottom', '15px');
                     }
                 });
+
+                $(window).resize(function(){
+                    // mobile device
+                    var width = $(document).width();
+                    if(width < 500){
+                        $('.cover').css("background", "url('https://sites.google.com/site/javat"
+                            +"utorialadvanced241/_/rsrc/1532794003267/home/background-small.jpg')");
+                        $('.cover').css("background-size", "cover");
+                        $('#skillsImage').attr("src", "https://sites.google.com/site/jav"
+                            +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
+                        $('#contact').css('height', 'auto');
+                        $('#greenBox').css('padding', '10px');
+                    }
+                });
                 
-                // mobile device
-                var width = $(document).width();
-                if(width < 500){
-                    $('.cover').css("background", "url('https://sites.google.com/site/javat"
-                        +"utorialadvanced241/_/rsrc/1532794003267/home/background-small.jpg')");
-                    $('.cover').css("background-size", "cover");
-                    $('#skillsImage').attr("src", "https://sites.google.com/site/jav"
-                        +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
-                    $('#contact').css('height', 'auto');
-                    $('#greenBox').css('padding', '10px');
-                }
+                
 
                 // adds smooth scroll functionality
                 $('.nav-link, .decorative-about-button').on('click', function(event) {
