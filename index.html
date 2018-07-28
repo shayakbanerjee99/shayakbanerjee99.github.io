@@ -30,6 +30,18 @@
                         $('#navbar').css('padding-bottom', '15px');
                     }
                 });
+                
+                // mobile device
+                var width = $(document).width();
+                if(width < 400){
+                    $('.cover').css("background", "url('https://sites.google.com/site/javat"
+                        +"utorialadvanced241/_/rsrc/1532794003267/home/background-small.jpg')");
+                    $('.cover').css("background-size", "cover");
+                    $('#skillsImage').attr("src", "https://sites.google.com/site/jav"
+                        +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
+                    $('#contact').css('height', 'auto');
+                    $('#greenBox').css('padding', '10px');
+                }
 
                 // adds smooth scroll functionality
                 $('.nav-link, .decorative-about-button').on('click', function(event) {
@@ -98,7 +110,7 @@
 
             .cover{
                 background: url('https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532773251129/home/background.jpg');
-                background-size: contain;
+                background-size: cover;
             }
 
             .bg-dark-translucent{
@@ -140,6 +152,10 @@
                 .name{
                     font-size: 6vw;
                 }
+
+                .android-developer{
+                    font-size: 2vw;
+                }
             }
 
             .android-developer{
@@ -147,12 +163,6 @@
                 color: white; 
                 font-family: 'roboto', sans-serif;
                 font-size: 18px;
-            }
-
-            @media(min-width: 500px){
-                .android-developer{
-                    font-size: 2vw;
-                }
             }
 
             .about-title{
@@ -305,7 +315,10 @@
             <a class="navbar-brand brand-logo" style="color: white;">Shayak Banerjee</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon" style="color:white"><img src="menu_icon.png" height=30 width=30></span>
+                <span class="navbar-toggler-icon" style="color:white">
+                    <img src="https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532794011324/home/menu_icon.png" 
+                        height=30 width=30>
+                </span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
@@ -385,8 +398,8 @@
             
             
         </div>
-        <div id="skills"  style="width: 100%; height: auto; overflow-block: auto;">
-            <img src="https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532773263280/home/skills.png"
+        <div id="skills" style="width: 100%; height: auto; overflow-block: auto;">
+            <img id="skillsImage" src="https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532773263280/home/skills.png"
                 style="width: inherit; height: inherit">
         </div>
         <div id="achievements" style="width: 100%; height: auto; overflow-block: auto; background-color: #ffbc90; 
@@ -418,13 +431,14 @@
             
         </div>
         
-        <div id="contact" style="width: 100%; height: auto; overflow-block: auto; background-color: #d5ffe6; text-align: center;">
+        <div id="contact" style="width: 100%; height: 100%; overflow-block: auto; background-color: #d5ffe6; text-align: center;">
 
             <h1 style="color: #008033; font-family: 'MontSerrat', 'sans-serif'; position: relative;
                 font-size: 50px; font-weight: 700; display: inline-block; margin-top: 100px;">CONTACT</h1>
 
             <div style="width: 100%; height: auto; overflow-block: auto; background-color: #008033;">
-                <div style="display: relative; margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
+                <div id="greenBox" style="display: relative; margin-left: auto; margin-right: auto; width: 80%; text-align: center;
+                    padding-top: 5%; padding-bottom: 5%">
                     <form>
                         <div class="row" style="padding-top:20px; padding-bottom: 0px;">
                             <div class="col-sm-6">
