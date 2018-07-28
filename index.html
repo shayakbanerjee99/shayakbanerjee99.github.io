@@ -1,22 +1,368 @@
 <html>
-  <head>
-    <title>Sample "Hello, World" Application</title>
-  </head>
-  <body bgcolor=white>
+    <head>
+        <title>Shayak Banerjee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <img src="images/springsource.png">
-        </td>
-        <td>
-          <h1>Sample "Hello, World" Application</h1>
-        </td>
-      </tr>
-    </table>
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+        
+        <script>
+            $(document).ready(function(){
+                // go to top of the page on startup/refresh
+                // window.scrollTo(0, 0);
+                // Changes the color of the navigation bar on scroll
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if(scroll > 10){
+                        $('#navbar').css('background-color', '#1a1a1a');
+                        $('#navbar').css('padding-top', '10px');
+                        $('#navbar').css('padding-bottom', '10px');
+                    } else {
+                        $('#navbar').css('background-color', 'rgba(0, 0, 0, 0.4)');
+                        $('#navbar').css('padding-top', '15px');
+                        $('#navbar').css('padding-bottom', '15px');
+                    }
+                });
 
-    <p>This is the home page for the HelloWorld Web application. </p>
-    
+                // adds smooth scroll functionality
+                $('.nav-link, .decorative-about-button').on('click', function(event) {
+                        // 600 is the time it takes to smooth scrool
+                        $('html, body').animate({scrollTop: $(this.hash).offset().top}, 600);
+                });
+            });
+        </script>
+        <style>
 
-  </body>
+            @font-face{
+                font-family: 'Laksaman';
+                src: url('https://shayakbanerjee.000webhostapp.com/Laksaman.ttf')format(ttf);
+            }
+
+            @font-face{
+                font-family: 'Manjari';
+                src: url('https://shayakbanerjee.000webhostapp.com/Manjari-Thin.otf')format(otf);
+            }
+
+            .cover{
+                background: url('https://image.ibb.co/fMvgr8/background.jpg');
+                background-size: cover;
+            }
+
+            .bg-dark-translucent{
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .brand-logo{
+                font-family: "Marck Script", sans-serif;
+                font-weight: 900;
+                font-size: 25px;
+                padding: 5px;
+                margin-left: 10px;
+                
+            }
+
+            .nav-link{
+                color: white;
+                border-radius: 15px !important; 
+                margin-right: 5px !important;
+            }
+
+            .nav-link:hover{
+                background-color: rgba(255, 255, 255, 0.9);
+                color:black;
+            }
+
+            .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+                color: black;
+                background-color: white;
+            }
+
+            .name{
+                font-family: 'MontSerrat', sans-serif;
+                font-weight: 900;
+                font-size: 72px;
+                color: #ffcc00;
+            }
+
+            .about-title{
+                font-family: 'MontSerrat', sans-serif;
+                font-size: 65px;
+                font-weight: 500;
+                color: #333333;
+                margin-top: 15px;
+            }
+
+            .about-headings{
+                color: #333333;
+                font-weight: 300;
+
+            }
+
+            .about-content{
+                border: 2px solid #333333; 
+                padding: 15px;
+                margin: 15px;
+                border-radius: 3px;
+            }
+
+            .about-content p{
+                font-family: 'Laksaman', sans-serif;
+            }
+
+            #navbar{
+                position: fixed; 
+                width: 100%; 
+                padding-top: 15px; 
+                padding-bottom: 15px; 
+                z-index: 2;
+            }
+
+            #btn-about{
+                font-family: 'MontSerrat', sans-serif;
+                font-weight: 700;
+                text-decoration: none;
+                color: #ffd735;
+                display: inline-block;
+                margin-top: 100px;
+                padding: 7px;
+                width: 90px;
+                padding: 5px;
+                border-radius: 20px;
+                border: 2px solid #ffd735;
+            }
+
+            #btn-about:hover{
+                background-color: #ffcc00;
+                color: #333333;
+            }
+
+            .decoration-line{
+                width: 90px; 
+                height: 18px; 
+                background-color: #ffd735;
+                margin-top: 14%;
+                display: inline-block;
+            }
+
+            .bottom-triangle{
+                margin-top: 8px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid #ffd735;
+                display: inline-block;
+            }
+            
+            .achievements-image{
+                position:relative; 
+                width: 100%; 
+                height: 250px;
+            }
+
+            .achievement-title{
+                font-family: 'MontSerrat', 'sans-serif'; 
+                text-transform: uppercase; 
+                font-weight: 600;
+                color: #6b3d01; 
+                margin-top: 20px; 
+                margin-bottom: 0px;
+            }
+
+            .achievement-description{
+                font-family: 'Veranda';
+                font-style: oblique; 
+                color: rgb(151, 68, 0);
+            }
+
+            .submit-button{
+                font-family: 'MontSerrat'; 
+                font-weight: 600; 
+                color: white; 
+                background-color: #005221;
+                padding: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                border-radius: 10px;
+                border: 3px solid #005221;
+            }
+
+            .submit-button:hover{
+                background-color: #016429;
+                border-color: #016429;
+                color: white;
+                text-decoration: none;
+            }
+
+            .social-media-handle-button{
+                height: 50px; 
+                width: 50px; 
+                border: 3px solid #008033; 
+                padding: 5px;
+                border-radius: 25px;
+                margin: 10px;
+            }
+
+            .social-media-handle-button:hover{
+                background-color: #48ff91;
+            }
+            
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="10" style="min-width: 1000px;">
+        <nav id="navbar" class="navbar nav-pills justify-content-between bg-dark-translucent">
+            <a class="navbar-brand brand-logo" style="color: white;">Shayak Banerjee</a>
+
+            <ul class="nav top-nav" style="margin-right: 30px">
+                <li class="nav-item">
+                    <a id="link_home" class="nav-link active" href="#home">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_about" class="nav-link" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_skills" class="nav-link" href="#skills">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_achievements" class="nav-link nav-link-button" href="#achievements">ACHIEVEMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link_contact" class="nav-link nav-link-button" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="home" class="cover" style="width: 100%; height: 100%; text-align: center">
+            <div id="name" style="padding-top: 300px; text-align: center; display: inline-block;">
+                <h1 class="name">Shayak Banerjee</h1>
+                <h4 style="text-align: end; color: white; font-family: 'roboto', sans-serif;">Android Developer</h4>
+            </div>
+            <br><a id="btn-about" class="decorative-about-button" href="#about">ABOUT</a>
+        </div>
+        <div id="about" style="width: 100%; height: 150%; background-color: #fff6d5; padding-bottom: 2px;">
+
+            <!-- title of the about page -->
+            <div class="about-title-div" style="padding-top: 40px;">
+                <!-- about title -->
+                <div class="text-center about-title">ABOUT</div>
+                <!-- underline -->
+                <div class="text-center" style="padding-bottom: 30px; padding-top: 0px;">
+                    <img src="https://image.ibb.co/nuybr8/underline.png" style="width: 300px;"/>
+                </div>
+            </div>    
+
+            <div class="row" style="margin-top: 30px">
+                <div class="col"></div>
+                <div class="col" style="font-family: 'Laksaman', sans-serif;">
+                    <p valign="middle">
+                        I  am  in the  sophomore year in SRM  University,  Chennai.
+                        Over the past few years, I  have experimented with various
+                        comupter languages and computer technologies and
+                        have found Java and Android development to  be my strength.
+                        However, I  have a very curious path towards computing and
+                        don't have  any inhibitions in  learning  new technologies.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="https://image.ibb.co/hv7SW8/about.jpg" 
+                        style="width: 250px"/>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <!-- learner bitplumber creator -->
+            <div class="row justify-content-center" style="margin-top: 30px">
+                <div class="col-sm-3 about-content">
+                    <h3 class="about-headings">Learner</h3>
+                    <p>Forever enthusiastic to learn new things and expand my horizons</p>
+                </div>
+                <div class="col-sm-3 about-content">
+                        <h3 class="about-headings">Bit Plumber</h3>
+                        <p>Intermediate programmer aspiring to make useful stuff and building a career out of it.</p>
+                </div>
+                <div class="col-sm-3 about-content">
+                        <h3 class="about-headings">Creator</h3>
+                        <p>Love to create, be it music, graffiti or user interfaces.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div id="skills"  style="width: 100%; height: 110%; 
+            background: url('https://image.ibb.co/hOu7W8/skills.png'); 
+            background-size: cover">
+        </div>
+        <div id="achievements" style="width: 100%; height: 100%; background-color: #ffbc90; 
+            background-size: cover; position: relative; min-width: 1150px; text-align: center;">
+            
+            <div style="color: #8d5000; font-family: 'MontSerrat', 'sans-serif'; position: relative;
+                font-size: 50px; font-weight: 700; display: inline-block; margin-top: 100px;">
+                ACHIEVEMENTS
+                <!-- <br><img src="red_underline.png" style="width: 475px;"> -->
+                <div style="width: 426px; height: 7px; background-color: #8d5000;"></div>
+            </div>
+            <div style="display: relative; margin-left: auto; margin-right: auto; width: 80%;">
+                <div class="row justify-content-center" style="position:relative; margin-top: 50px; text-align: center;">
+
+                    <div class="col-sm-5" style="margin-right: 50px">
+                        <img class="achievements-image" src="https://image.ibb.co/nrQEB8/game_of_codes.jpg">
+                        <p class="achievement-title">Game Of Codes</p>
+                        <p class="achievement-description">Interschool competitive programming competition</p>
+                    </div>
+
+                    <div class="col-sm-5">
+                        <img class="achievements-image" src="https://image.ibb.co/jS8qjT/teens_rock.jpg">
+                        <p class="achievement-title">yamaha teen's rock</p>
+                        <p class="achievement-description">National level rock band competition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" style="width: 100%; height: 100%; background-color: #d5ffe6; text-align: center;">
+
+            <h1 style="color: #008033; font-family: 'MontSerrat', 'sans-serif'; position: relative;
+                font-size: 50px; font-weight: 700; display: inline-block; margin-top: 100px;">CONTACT</h1>
+
+            <div style="width: 100%; height: 350px; background-color: #008033;">
+                <div style="display: relative; margin-left: auto; margin-right: auto; width: 50%; text-align: center;">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" style="width: 300px; margin-top: 100px; padding: 10px; height: 50px;
+                                    font-family: 'Manjari';" placeholder="Name">
+                                <input type="text" style="width: 300px; margin-top: 40px; padding: 10px; height: 50px;
+                                    font-family: 'Manjari';" placeholder="Email">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" style="width: 300px; height: 140px; margin-top: 100px; 
+                                    padding: 10px; margin-left: 10px; font-family: 'Manjari';" placeholder="Message">
+                            </div>
+                        </div>
+                        <div style="margin-top: 30px">
+                            <a href="" class="submit-button">SUBMIT</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="social-media-handles">
+                <a href="https://www.facebook.com/s.h.a.y.a.k.b.a.n.e.r.j.y">
+                    <img src="https://image.ibb.co/gvwMr8/facebook_logo.png" 
+                        class="social-media-handle-button">
+                </a>
+                <a href="https://www.instagram.com/shayak_banerjee">
+                    <img src="https://image.ibb.co/hVrnW8/instagram_logo.png" 
+                        class="social-media-handle-button">
+                </a>
+                <a href="https://github.com/shayakbanerjee99">
+                    <img src="https://image.ibb.co/j9ci4T/github_logo.png" 
+                    class="social-media-handle-button">
+                </a>
+            </div>
+        </div>
+    </body>
 </html>
