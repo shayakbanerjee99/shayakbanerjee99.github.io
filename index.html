@@ -98,7 +98,7 @@
 
             .cover{
                 background: url('https://sites.google.com/site/javatutorialadvanced241/_/rsrc/1532773251129/home/background.jpg');
-                background-size: cover;
+                background-size: contain;
             }
 
             .bg-dark-translucent{
@@ -116,7 +116,7 @@
 
             .nav-link{
                 color: white;
-                border-radius: 15px !important; 
+                border-radius: 5px !important; 
                 margin-right: 5px !important;
             }
 
@@ -129,12 +129,30 @@
                 color: black;
                 background-color: white;
             }
-
+            
             .name{
                 font-family: 'MontSerrat', sans-serif;
                 font-weight: 900;
-                font-size: 72px;
                 color: #ffcc00;
+                font-size: 35px;
+            }
+            @media(min-width: 500px){
+                .name{
+                    font-size: 6vw;
+                }
+            }
+
+            .android-developer{
+                text-align: end; 
+                color: white; 
+                font-family: 'roboto', sans-serif;
+                font-size: 18px;
+            }
+
+            @media(min-width: 500px){
+                .android-developer{
+                    font-size: 2vw;
+                }
             }
 
             .about-title{
@@ -176,7 +194,7 @@
                 text-decoration: none;
                 color: #ffd735;
                 display: inline-block;
-                margin-top: 100px;
+                margin-top: 10%;
                 margin-bottom: 40px;
                 padding: 7px;
                 width: 90px;
@@ -244,15 +262,18 @@
             }
 
             .submit-button{
-                font-family: 'MontSerrat'; 
-                font-weight: 600; 
+                margin-bottom: 20px; 
+                background-color: #005221; 
+                border-color: #005221;
                 color: white; 
-                background-color: #005221;
-                padding: 5px;
+                border-style: solid; 
+                border-radius: 3px; 
+                font-family: 'MontSerrat'; 
+                font-weight: 600;
                 padding-left: 30px;
                 padding-right: 30px;
-                border-radius: 10px;
-                border: 3px solid #005221;
+                padding-top: 5px;
+                padding-bottom: 5px;
             }
 
             .submit-button:hover{
@@ -260,6 +281,7 @@
                 border-color: #016429;
                 color: white;
                 text-decoration: none;
+                cursor: pointer;
             }
 
             .social-media-handle-button{
@@ -277,32 +299,41 @@
             
         </style>
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="10" style="min-width: 1000px;">
-        <nav id="navbar" class="navbar nav-pills justify-content-between bg-dark-translucent">
+    <body data-spy="scroll" data-target=".navbar" data-offset="10">
+
+        <nav id="navbar" class="navbar navbar-expand-sm nav-pills justify-content-center bg-dark-translucent">
             <a class="navbar-brand brand-logo" style="color: white;">Shayak Banerjee</a>
 
-            <ul class="nav top-nav" style="margin-right: 30px">
-                <li class="nav-item">
-                    <a id="link_home" class="nav-link active" href="#home">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a id="link_about" class="nav-link" href="#about">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a id="link_skills" class="nav-link" href="#skills">SKILLS</a>
-                </li>
-                <li class="nav-item">
-                    <a id="link_achievements" class="nav-link nav-link-button" href="#achievements">ACHIEVEMENTS</a>
-                </li>
-                <li class="nav-item">
-                    <a id="link_contact" class="nav-link nav-link-button" href="#contact">CONTACT</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon" style="color:white"><img src="menu_icon.png" height=30 width=30></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav" style="margin-right: 30px">
+                    <li class="nav-item">
+                        <a id="link_home" class="nav-link active" href="#home" style="padding-left: 10px; padding-right: 10px">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link_about" class="nav-link" href="#about" style="padding-left: 10px; padding-right: 10px">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link_skills" class="nav-link" href="#skills" style="padding-left: 10px; padding-right: 10px">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link_achievements" class="nav-link nav-link-button" href="#achievements" style="padding-left: 10px; 
+                            padding-right: 10px">ACHIEVEMENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link_contact" class="nav-link nav-link-button" href="#contact" style="padding-left: 10px; 
+                            padding-right: 10px">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div id="home" class="cover" style="width: 100%; height: auto; text-align: center; overflow-block: auto;">
             <div id="name" style="padding-top: 300px; text-align: center; display: inline-block;">
                 <h1 class="name">Shayak Banerjee</h1>
-                <h4 style="text-align: end; color: white; font-family: 'roboto', sans-serif;">Android Developer</h4>
+                <h4 class="android-developer">Android Developer</h4>
             </div>
             <br><a id="btn-about" class="decorative-about-button" href="#about">ABOUT</a>
         </div>
@@ -318,10 +349,13 @@
                 </div>
             </div>    
 
-            <div class="row" style="margin-top: 30px">
-                <div class="col"></div>
-                <div class="col" style="font-family: 'Laksaman', sans-serif;">
-                    <p valign="middle">
+            <div class="row" style="margin:0 auto; width: 60%;">
+                <div class="col">
+                    <img src="https://image.ibb.co/hv7SW8/about.jpg" 
+                        style="width: 250px"/>
+                </div>
+                <div class="col" style="font-family: 'Laksaman', sans-serif; font-size: 18px;">
+                    <p>
                         I  am  in the  sophomore year in SRM  University,  Chennai.
                         Over the past few years, I  have experimented with various
                         comupter languages and computer technologies and
@@ -330,20 +364,16 @@
                         don't have  any inhibitions in  learning  new technologies.
                     </p>
                 </div>
-                <div class="col">
-                    <img src="https://image.ibb.co/hv7SW8/about.jpg" 
-                        style="width: 250px"/>
-                </div>
-                <div class="col"></div>
+                
             </div>
 
             <!-- learner bitplumber creator -->
-            <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 30px;">
-                <div class="col-sm-3 about-content">
+            <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 30px; padding:10px;">
+                <div class="col-sm-3 about-content" >
                     <h3 class="about-headings">Learner</h3>
                     <p>Forever enthusiastic to learn new things and expand my horizons</p>
                 </div>
-                <div class="col-sm-3 about-content">
+                <div class="col-sm-3 about-content" >
                         <h3 class="about-headings">Bit Plumber</h3>
                         <p>Intermediate programmer aspiring to make useful stuff and building a career out of it.</p>
                 </div>
@@ -363,22 +393,21 @@
             background-size: cover; position: relative; text-align: center;">
             
             <div style="color: #8d5000; font-family: 'MontSerrat', 'sans-serif'; position: relative;
-                font-size: 50px; font-weight: 700; display: inline-block; margin-top: 100px;">
+                font-size: 6vw; font-weight: 700; display: inline-block; margin-top: 7%;">
                 ACHIEVEMENTS
-                <!-- <br><img src="red_underline.png" style="width: 475px;"> -->
-                <div style="width: 426px; height: 7px; background-color: #8d5000;"></div>
+                <div style="width: 50vw; height: 7px; background-color: #8d5000;"></div>
             </div>
             <div style="display: relative; margin-left: auto; margin-right: auto; width: 80%;">
-                <div class="row justify-content-center" style="position:relative; margin-top: 50px; text-align: center;
+                <div class="row justify-content-center" style="position:relative; margin-top: 30px; text-align: center;
                     padding-bottom: 40px;">
                     
-                    <div class="col-sm-5 achievements-box achievements-box1" style="margin-right: 50px;">
+                    <div class="col-sm-5 achievements-box achievements-box1" style="margin:10px">
                         <img class="achievements-image" src="https://image.ibb.co/nrQEB8/game_of_codes.jpg">
                         <p class="achievement-title">Game Of Codes</p>
                         <p class="achievement-description">Interschool competitive programming competition</p>
                     </div>
 
-                    <div class="col-sm-5 achievements-box achievements-box2">
+                    <div class="col-sm-5 achievements-box achievements-box2" style="margin:10px;">
                         <img class="achievements-image" src="https://image.ibb.co/jS8qjT/teens_rock.jpg">
                         <p class="achievement-title">yamaha teen's rock</p>
                         <p class="achievement-description">National level rock band competition</p>
@@ -394,24 +423,22 @@
             <h1 style="color: #008033; font-family: 'MontSerrat', 'sans-serif'; position: relative;
                 font-size: 50px; font-weight: 700; display: inline-block; margin-top: 100px;">CONTACT</h1>
 
-            <div style="width: 100%; height: 350px; background-color: #008033;">
-                <div style="display: relative; margin-left: auto; margin-right: auto; width: 50%; text-align: center;">
+            <div style="width: 100%; height: auto; overflow-block: auto; background-color: #008033;">
+                <div style="display: relative; margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
                     <form>
-                        <div class="row">
-                            <div class="col-sm-4" style="display: block; margin-right: 110px">
-                                <input type="text" style="width: 300px; margin-top: 100px; padding: 10px; height: 50px;
-                                    font-family: 'Comfortaa';" placeholder="Name">
-                                <input type="text" style="width: 300px; margin-top: 40px; padding: 10px; height: 50px;
-                                    font-family: 'Comfortaa';" placeholder="Email">
+                        <div class="row" style="padding-top:20px; padding-bottom: 0px;">
+                            <div class="col-sm-6">
+                                <input type="text" row="20" placeholder="Name" style="padding: 10px; font-family: 'Comfortaa';
+                                    height: 60px; width: 100%;">
+                                <input type="text" row="20" placeholder="Email" style="padding: 10px; font-family: 'Comfortaa';
+                                    margin-top: 20px; height: 60px; margin-bottom: 20px; width: 100%">
                             </div>
-                            <div class="col-sm-4" style="display: block;">
-                                <input type="text" style="width: 300px; height: 140px; margin-top: 100px; 
-                                    padding: 10px; font-family: 'Comfortaa';" placeholder="Message">
+                            <div class="col-sm-6">
+                                <input type="text" row="21" placeholder="Message" style="padding:10px; height: 140px; width: 100%;
+                                    margin-bottom: 20px;">
                             </div>
                         </div>
-                        <div style="margin-top: 30px">
-                            <a href="" class="submit-button">SUBMIT</a>
-                        </div>
+                        <button type="submit" class="submit-button">SUBMIT</button>
                     </form>
                 </div>
             </div>
