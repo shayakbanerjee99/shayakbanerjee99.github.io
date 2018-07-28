@@ -30,7 +30,13 @@
                         $('#navbar').css('padding-bottom', '15px');
                     }
                 });
-
+                
+                // on resizing the window
+                var coverImage = $('.cover').css("background");
+                var coverSize = $('.cover').css("background-size");
+                var skillsImage = $('#skillsImage').attr("src");
+                var contactHeight = $('#contact').css('height');
+                var greenBoxPadding = $('#greenBox').css('padding');
                 $(window).resize(function(){
                     // mobile device
                     var width = $(document).width();
@@ -42,6 +48,12 @@
                             +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
                         $('#contact').css('height', 'auto');
                         $('#greenBox').css('padding', '10px');
+                    } else {
+                        $('.cover').css("background", coverImage);
+                        $('.cover').css("background-size", coverSize);
+                        $('#skillsImage').attr("src", skillsImage);
+                        $('#contact').css('height', contactHeight);
+                        $('#greenBox').css('padding', greenBoxPadding);
                     }
                 });
                 
