@@ -30,6 +30,18 @@
                         $('#navbar').css('padding-bottom', '15px');
                     }
                 });
+
+                // for mobile devices
+                var width = $(document).width();
+                if(width < 500){
+                    $('.cover').css("background", "url('https://sites.google.com/site/javat"
+                        +"utorialadvanced241/_/rsrc/1532794003267/home/background-small.jpg')");
+                    $('.cover').css("background-size", "cover");
+                    $('#skillsImage').attr("src", "https://sites.google.com/site/jav"
+                        +"atutorialadvanced241/_/rsrc/1532794063466/home/skills-small.png");
+                    $('#contact').css('height', 'auto');
+                    $('#greenBox').css('padding', '10px');
+                }
                 
                 // on resizing the window
                 var coverImage = $('.cover').css("background");
